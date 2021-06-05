@@ -74,7 +74,7 @@ export const Todos = () => {
                 />
             ))}
             {!hasTodos && (
-                <p className="mb-5 text-xl text-red-500 uppercase">Please add a todo!</p>
+                <p className="mb-5 text-xl text-red-500 uppercase">No todos available!</p>
             )}
             {hasTodos && (
                 <p>{`[${remainingTodos} of ${todosLength}] todos remaining`}</p>
