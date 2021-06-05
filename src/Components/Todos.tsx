@@ -30,13 +30,17 @@ export const Todos = () => {
 
     const handleSubmitTodo = (e:FormEvent) => {
         e.preventDefault()
-
-        const todo = {
-            id: uuidv4(),
-            task: task,
-            isCompleted: false,
+        if(!task) {
+            alert('Please add a task todo')
         }
-        task && handleAddTodo(todo)
+        else{
+            const todo = {
+                id: uuidv4(),
+                task: task,
+                isCompleted: false,
+            }
+            task && handleAddTodo(todo)
+        }   
     }
 
     const handleDeleteTodo = (id: string) => {

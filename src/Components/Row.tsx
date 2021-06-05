@@ -30,7 +30,7 @@ export const Row = ({
         <div className="w-1/6 flex justify-between items-center mr-2">
             <button 
                 aria-label="Delete a todo"
-                className="h-7 w-7 flex justify-center items-stretch bg-red-400 hover:bg-red-700 text-white font-bold rounded-full"
+                className="h-7 w-7 flex justify-center items-stretch bg-red-400 hover:bg-red-500 focus:outline-none text-white font-bold rounded-full"
                 onClick={() => handleDeleteTodo(id)}>
                 x
             </button>

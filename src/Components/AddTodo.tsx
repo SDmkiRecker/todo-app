@@ -18,9 +18,10 @@ export const AddTodo = ({
             placeholder="Please add a todo.." 
             value={task}
             className="flex-1 rounded shadow p-2 text-gray-dark mr-2" 
-            onChange={handleChange} 
+            onChange={handleChange}
+            data-attribute-name="Todo" 
         />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" aria-label="Add a todo">
+        <button className="bg-blue-500 hover:bg-blue-700 focus:outline-none text-white font-bold py-2 px-4 rounded-full" aria-label="Add a todo">
             Add Task
         </button>
     </form>
