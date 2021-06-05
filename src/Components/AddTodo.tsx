@@ -15,9 +15,9 @@ export const AddTodo = ({
         <input 
             type="text" 
             name="task"
-            placeholder="Please add a todo.." 
+            placeholder="Please add a task.." 
             value={task}
-            className="flex-1 rounded shadow p-2 text-gray-dark mr-2" 
+            className="flex-1 shadow p-2 pl-4 h-10 text-gray-dark mr-2 rounded-full focus:outline-none" 
             onChange={handleChange}
             data-attribute-name="Todo" 
         />

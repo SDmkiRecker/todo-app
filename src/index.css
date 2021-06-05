@@ -2,3 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #f1f2f4;
+}

@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-100">
+    <div className="h-screen my-10 flex justify-center items-center bg-gray-100">
       <Todos />
     </div>
   );

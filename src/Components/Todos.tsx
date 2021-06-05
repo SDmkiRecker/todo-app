@@ -31,7 +31,7 @@ export const Todos = () => {
     const handleSubmitTodo = (e:FormEvent) => {
         e.preventDefault()
         if(!task) {
-            alert('Please add a task todo')
+            alert('Please add a task!')
         }
         else{
             const todo = {
@@ -63,26 +63,31 @@ export const Todos = () => {
 
     return (
         <section className="w-10/12 sm:w-10/12 lg:w-1/2 max-w-2xl flex flex-col items-center">
+        
             <AddTodo  
                 task={task}
                 handleChange={handleChange}
                 handleSubmitTodo={handleSubmitTodo}
             />
             <div className="h-10 "></div>
-            {todos.map((todo) => (
-                <Row 
-                    key={todo.id} 
-                    todo={todo} 
-                    handleDeleteTodo={handleDeleteTodo}
-                    handleCheckTodo={handleCheckTodo}  
-                />
-            ))}
-            {!hasTodos && (
-                <p className="mb-5 text-xl text-red-500 uppercase">No todos available!</p>
-            )}
-            {hasTodos && (
-                <p>{`[${remainingTodos} of ${todosLength}] todos remaining`}</p>
-            )}
+            <h2 className="text-center">All Tasks</h2>
+            <div className="h-10 "></div>
+            <div className="taskWrapper flex justify-between w-full flex-col">
+                {todos.map((todo) => (
+                    <Row 
+                        key={todo.id} 
+                        todo={todo} 
+                        handleDeleteTodo={handleDeleteTodo}
+                        handleCheckTodo={handleCheckTodo}  
+                    />
+                ))}
+                {!hasTodos && (
+                    <p className="mb-5 text-xl text-gray-500 text-center">No tasks available!</p>
+                )}
+                {hasTodos && (
+                    <p className="flex justify-center w-full">{`[${remainingTodos} of ${todosLength}] todos remaining`}</p>
+                )}
+            </div>
         </section>
     )
 }
